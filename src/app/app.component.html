@@ -1,0 +1,19 @@
+<div class="editor">
+  <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+    <label for="email">Email List</label>
+    <input id="email" type="text" pInputText formControlName="email" placeholder="Comma separated"/>
+
+    <label for="subject">Email Subject</label>
+    <input id="subject" type="text" pInputText formControlName="subject"/>
+
+    <p-editor formControlName="primeNgEditor" [style]="{ height: '320px' }"></p-editor>
+
+    <p-button class="reset" type="reset" severity="secondary">Clear</p-button>
+    <p-button class="submit" type="submit">Submit</p-button>
+
+  </form>
+
+  {{editorTemplate}}
+
+</div>
+
